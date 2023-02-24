@@ -1,0 +1,356 @@
+{
+	"info": {
+		"_postman_id": "350f83e3-9300-4285-8187-70dadb5730e0",
+		"name": "Control Alumnos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login_alumnos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"correo\": \"ejemplo@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "añadir_alumnos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"personas\",\r\n    \"correo\": \"personas@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"rol\": \"ROL_ALUMNO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/usuarios/agregar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios",
+						"agregar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mostrar_usarios",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/usuarios/mostrar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios",
+						"mostrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editar_Alumnos",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2Y3ZjFmMjZlYTA5ZjhlMmIzZGJhNGUiLCJpYXQiOjE2NzcyMDEzMTEsImV4cCI6MTY3NzIwNDkxMX0.iPwo57fAEGtJbST--slDlZAbK_ebhVhACgjiwzQnHuc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"persona\",\r\n    \"correo\": \"ejemplo@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"rol\": \"ROL_ALUMNO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/usuarios/editarPerfil/63f7f1f26ea09f8e2b3dba4e00000",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios",
+						"editarPerfil",
+						"63f7f1f26ea09f8e2b3dba4e00000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Maestro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"correo\": \"ejemplo12@gmail.com\",\r\n    \"password\": \"102030\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "añadir Maestro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"ejemplo\",\r\n    \"correo\": \"ejemplo12@gmail.com\",\r\n    \"password\": \"102030\",\r\n    \"rol\": \"ROL_MAESTRO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/usuarios/agregar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios",
+						"agregar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mostrar cursos del alumno",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\": \"63f7ed61884d1bc68695e902\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/cursos/mostrar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cursos",
+						"mostrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Asignacion de cursos",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2Y4MTZkOTQxMjk5NTA2MGYwYjc3YWIiLCJpYXQiOjE2NzcyMDYwMjgsImV4cCI6MTY3NzIwOTYyOH0.tEAcov1GQF-3EpHkWPHbkYqzdRf-CZo5PZBDiUUbHTg",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cursos\":[\"63f8019152ff964c0cde7734\"],\r\n  \"usuario\":\"63f7ed61884d1bc68695e902\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/cursos/asignar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cursos",
+						"asignar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editar_perfil",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"persona\",\r\n    \"correo\": \"ejemplo@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"rol\": \"ROL_ALUMNO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/usuarios/editar/63f7f1f26ea09f8e2b3dba4e",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios",
+						"editar",
+						"63f7f1f26ea09f8e2b3dba4e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar_usarios",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2Y4MTZkOTQxMjk5NTA2MGYwYjc3YWIiLCJpYXQiOjE2NzcyMDMyNTMsImV4cCI6MTY3NzIwNjg1M30.iaehPWANQjA3Vsti_PYsV2uM3gpohPyUetg13iGxzCs",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/usuarios/eliminar/63f7ed61884d1bc68695e902",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios",
+						"eliminar",
+						"63f7ed61884d1bc68695e902"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar_cursos",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2Y4MTZkOTQxMjk5NTA2MGYwYjc3YWIiLCJpYXQiOjE2NzcyMDYwMjgsImV4cCI6MTY3NzIwOTYyOH0.tEAcov1GQF-3EpHkWPHbkYqzdRf-CZo5PZBDiUUbHTg",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/cursos/eliminar/63f8019152ff964c0cde7734",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cursos",
+						"eliminar",
+						"63f8019152ff964c0cde7734"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
